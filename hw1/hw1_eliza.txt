@@ -1,0 +1,1 @@
+As p is constant and n is increased efficiency and speedup increases but as n is constant and speedup is increased, the efficiency decreases but speedup increases.
