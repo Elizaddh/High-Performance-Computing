@@ -1,0 +1,43 @@
+Q1. Make your own code to count the prime numbers. What is the count of the prime numbers when n = 300000?
+25997
+
+Q2. Test the program with n=300000 and without OpenMP (serial). Then report the wall- clock time.
+17.31 sec
+
+Q3. Set the threads number to be 2. Then, test the program with OpenMP without scheduling. Report the wall-clock time
+11.9001 sec
+
+Q4. Test the program with “static” scheduling and report the wall-clock time.
+11.8936 sec
+
+Q5. Test the program with “static with chunk size 100” and report the wall-clock time.
+8.1437 sec
+
+Q6. Test the program with “dynamic” scheduling and report the wall-clock time.
+8.93145
+
+Q7. Test the program with “dynamic with chunk size 100” and report the wall-clock time.
+8.41402
+
+Q8. Test the program with “guided” scheduling and report the wall-clock time.
+8.4016
+
+Q9. Test the program more with different scheduling and chunk sizes. What is your best scenario to minimize the wall-clock time?
+chunck size                schedule static        schedule dynamic          schedule guided
+5                              12.1689                  8.59591                   8.31706 
+10                             8.12089                  8.14047                   8.28975 
+25                             8.9081                   8.12408                   8.33961 
+50                             8.12998                  8.68952                   8.32472
+100                            8.20586                  8.72392                   8.35228
+500                            8.20586                  8.4582                    8.42113
+1000                           8.12979                  8.44216                   8.32693 
+5000                           8.26864                  8.60553                   8.42016 
+10000                          8.34849                  8.66609                   8.63977
+50000                          9.39521                  9.82693                   9.02182
+100000                         10.7277                  11.2186                   9.34682
+300000                         16.2248                  16.8696                   16.6475 
+
+It is better to use static scheduling than dynamic scheduling in this case.
+
+Q10. Report your conclusion from above benchmark tests.
+When chuck size is higher dynamic scheduling has similiar wall clock time as static schedule.
